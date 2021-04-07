@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;/*to adjust width*/
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    height: 100%;
+}
+ul li{
+    list-style: none;
+}
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+p, li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+h1,h2,h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+}
+/* utility classes */
+.container{
+    max-width: 1200px;/*Helpful in small screen arrengements without
+     scrollbar arrenges the text*/
+    width:90%;
+    margin:0 auto;
+}
+.lg-heading
+{
+    font-size: 3.5rem;
+}
+.md-heading{
+    font-size:2.2rem ;
+
+}
+.text-red{
+    color:#e62946;
+
+}
+.text-light{
+    color:#f4f4f4;
+}
+.text-black{
+    color:#333333;
+}
+.text-gray{
+    color: #555555;
+}
+.bg-dark{
+    background-color:#263238 ;
+}
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em;
+}
+.btn-primery{
+    background-color: white;
+    border-radius: 10em;/* creates curve to the btn*/
+}
+.btn-primery:hover{
+    background-color: #fcf3f2;
+}
+.btn-secondery{
+    border: 2px solid #e62946;
+    border-radius: 1.5em;/*button border curve */
+    color:#e62946;
+    background-color: #f4f4f4;
+}
+.btn-secondery:hover{
+    background-color: #fcf3f2;/*mouse action*/
+}
+
+.header{
+    position: relative;
+    height: 95vh; 
+    /*add background image */
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./img/girls_party.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar{
+    /* border:2px solid white; */
+    padding:1rem;
+}
+.navbar .logo{
+    float:left;/* set the menu at left side */
+}
+.navbar .nav_items{
+    float:right;
+    margin-top: 1rem;
+}
+
+.navbar .nav_item{
+    display: inline-block;
+    padding:1rem ;
+    text-transform:uppercase ;
+}
+.navbar a:link,
+.navbar a:visited{
+    color:#f4f4f4;
+}
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+.navbar a:hover{
+    border-bottom:1px solid oldlace;
+}
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;    
+}
+
+/*__________________Header content styling___________________________*/
+.header_content{
+    position: absolute;/*TO set all content at center with respect to header which is parent*/
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+
+}
+.header_content h1{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.header_content p{
+    text-transform: uppercase;
+}
+#part1{
+    /* background-color: rgb(187, 223, 255); */
+    border:5px solid black;
+    padding:250px;
+    background-image: url("./img/hotel_surrounding_large.jpg");
+    background-position:center ;
+    background-size: cover;
+}
+
+/*___________________Showcase section styliing_________________________________*/
+.showcase{
+    background: #ddd;
+    padding: 10rem 0;
+}
+.row{
+    height:350px;
+   
+    background-color: white;
+}
+.row1 .row2 .row3{
+    margin-bottom: 10rem;
+}
+.row1 .imgbox,
+.row2 .textbox,
+.row3 .imgbox{
+    float: left;
+    width: 50%;
+}
+
+.row2 .imgbox,
+.row1 .textbox,
+.row3 .textbox{
+    float: right;
+    width: 50%;
+}
+.row .imgbox{
+    
+    height: 100%;
+}
+.row .textbox{
+    padding:3em;
+}
+.row .imgbox img{
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.row::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+/*-------------------------Features Section----------------------------------------*/
+.features{
+    padding: 10rem 0; 
+}
+.box-wrapper{
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.397);
+}
+.box{
+    float: left;
+    width:33.33333%;  /* box is 100% --->small boxes are 3.Hence 100/3=33.333333333... */
+    padding: 2rem;
+    text-align: center;
+}
+.box-1, .box-3{
+    background-color: #263238;
+    color: white;
+}
+.box-2{
+    background-color: tomato;
+    color: white;
+}
+.box-wrapper::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+/*__________________________Footer_____________________________________*/
+.footer{
+    background-color: #263238;
+    color: #f4f4f4;
+    padding:2rem;
+    text-align: center;
+
+}
+.social-media-links i{
+    margin: 2rem;
+}
+/*-----------------------------About PAge--------------------*/
+.about{
+    /*to set "About US" txt at middle*/
+    padding:5rem 0;
+}
+/*add pink line after text*/
+.about-heading::after{
+    content:'';
+    display:block;
+    border:3px solid #e62946;
+    width:100%; /*Accupy text length and border it*/
+}
+.line-add{
+    border-bottom: 6px solid  #e62946;;
+}
+/*_________________________ Listing stylt______________________________________________ */
+.abt-list-item{
+    text-align: center;
+   /* margin-top: 2rem;*/
+}
+.abt-list-item .left{
+    float: left;
+    width: 50%;
+}
+.abt-list-item .right{
+    float: right;
+    width: 50%;
+}
+
+.abt-list-item::after{
+content:'';
+display: block ;
+clear: both;
+}
+ .abt-list-item li::before{
+     content: '\2713'; /* add check arrow */
+    color:#e62946;/* change color of arrow*/
+    font-style: bold;
+    padding-right: lrem;/**from all side add space*/
+} 
+/* ________________Contact page___________________________ */
+.contact-form{
+    padding:5rem 0;
+    background: #f7f7f7;
+}
+
+.form-wrapper::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+.form-wrapper .company-address{
+ height:650px; 
+    background: #fff;
+  width:49%;
+  float:left;
+  padding: 1rem;
+}
+.form-wrapper .company-address i{
+    display: inline-block;
+    margin-right: 1rem;/*add space to right of 1 rem*/
+}
+.form-wrapper .company-address h2{
+    display: inline-block;
+   text-transform: uppercase;
+}
+.form-wrapper .address-group{
+    margin-bottom: 3rem;
+}
+/* ______________Form Styling__________________________ */
+
+.form-wrapper .form{
+    height:650px;
+    font-size: 1.6rem;
+    background: #fff;
+    width:49%;
+    float:right;
+    padding:1rem;
+}
+.form h1::after{
+    content: '';
+    display: block;
+    border: 3px solid #e62946;
+    width:100%;
+}
+.form-wrapper .form label{
+    /* to make it lengthy */
+    display: bloak;
+}
+.form-wrapper .form input{
+    padding:0.5rem;
+    width:100%;
+}
+.form-wrapper .form .form-group{
+    margin-bottom:1.2rem;
+}
+.form-wrapper .form label::after{
+    content:'';
+    color:#e62946;
+}
+.form-wrapper .form textarea{
+    width: 100%;
+    height:200px;
+    padding:1rem;
+}
+.form-btn{
+    display:block;
+    margin:0 auto;/*add space*/
+    padding:1em;
+    /* padding: 0.5em 3em; */
+    text-transform:uppercase;
+    width:40%;
+    background: #e62946;
+    color:#fff;
+    outline:none;
+    border:none;
+    border-radius: 1.5rem;
+    cursor:pointer;
+}
+/*_____________________Media Queries______________________________ */
+@media(max-width: 500px){
+    html{
+        font-size: 50%;/*by default 16px in html font size*/
+    }
+    .navbar .nav_items, .navbar .logo{
+        float:none;
+        display:block;
+        width:100%;
+        text-align: center;
+    }
+    
+    .row{
+        height:auto;
+        width:100%;
+    }
+    .row .imgbox,
+    .row .textbox{
+        float:none;
+        width:100%;
+        text-align: center;
+    }
+    .features .box{
+        float:none;
+        width:100%;
+        text-align: center;
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.397);
+    }
+    .features .box-2,
+    .features .box-3{
+        margin-top:7rem ;
+    }
+    .box-wrapper{
+        box-shadow:none;
+    }
+    .form-wrapper .company-address{
+        float:none;
+        width:100%;
+        height:auto;
+        margin-bottom:5rem;/*space for form*/
+    }
+    .form-wrapper .form{
+        float:none;
+        width:100%;
+        height:auto;
+    }
+}
+@media(min-width:501px) and (max-width:768px){
+    html{
+        font-size: 50%;/*by default 16px in html font size*/
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    .navbar .nav_items, .navbar .logo{
+        float:none;
+        display:block;
+        width:100%;
+        text-align: center;
+    }
+    .row{
+        height:auto;
+        width:100%;
+    }
+    .row .row1,
+    .row .row2,
+    .row .row3{
+        height:auto;
+        width:100%;
+    }
+    .row .imgbox,
+    .row .textbox{
+        float:none;
+        width:100%;
+        text-align: center;
+        /* margin-top: 1.5rem; */
+    }
+    .features .box{
+        float:none;
+        width:100%;
+        text-align: center;
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.397);
+
+    }
+    /* .features .box-2,
+    .features .box-3{
+         margin-top:5rem ; 
+    } */
+    .box-wrapper{
+        box-shadow:none;
+    }
+    .form-wrapper .company-address{
+        float:none;
+        width:100%;
+        height:auto;
+        /*margin-bottom:5rem;*//*space for form*/
+    }
+    .form-wrapper .form{
+        float:none;
+        width:100%;
+        height:auto;
+    }
+
+}
+
+@media(min-width:769px) and (max-width:1200px){
+    html{
+        /* 9px */
+        font-size:56.25%;
+    }
+    .row .textbox h2{
+        font-size:2.2rem;
+    }
+}
+@media(orientation:landscape)and (max-height:500px){
+    .header{
+        height: 90vmax;/*Either height or width big according to it*/
+
+    }
+}
